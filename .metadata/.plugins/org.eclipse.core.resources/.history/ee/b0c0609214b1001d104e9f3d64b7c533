@@ -1,0 +1,11 @@
+
+public class pruebaMetodos {
+
+	public static void main(String[] args) {
+		Cuenta cuentaMarco =new Cuenta();
+		cuentaMarco.saldo=300;
+		cuentaMarco.depositar(200);
+		
+		System.out.println(cuentaMarco.saldo);
+	}
+}

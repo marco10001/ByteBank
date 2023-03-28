@@ -1,0 +1,11 @@
+
+public class pruebaREferencia {
+	public static void main(String[] args) {
+		Cliente marco=new Cliente();
+		marco.documento="43369370";
+		marco.nombre="Marco";
+		marco.sexo="Masculino";
+		
+		Cuenta cuentaDeMarco=new Cuenta();
+	}
+}

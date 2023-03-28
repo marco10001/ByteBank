@@ -1,0 +1,14 @@
+
+public class EjemploCondicionales {
+	public static void main(String[] args) {
+		System.out.println();
+		
+		int edad=17;
+		if (edad>=18) {
+			System.out.println("Eres mayor");
+		}
+		
+		
+		
+	}
+}

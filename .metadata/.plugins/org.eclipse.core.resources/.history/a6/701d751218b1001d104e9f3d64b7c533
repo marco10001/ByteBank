@@ -1,0 +1,6 @@
+
+public class pruebaREferencia {
+	public static void main(String[] args) {
+		Cliente marco=new cliente();
+	}
+}

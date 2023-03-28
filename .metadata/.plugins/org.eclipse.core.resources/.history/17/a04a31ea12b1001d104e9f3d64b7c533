@@ -1,0 +1,8 @@
+
+public class pruebaMetodos {
+
+	public static void main(String[] args) {
+		Cuenta cuentaMarco =new Cuenta();
+		cuentaMarco.saldo=300;
+	}
+}
