@@ -1,0 +1,7 @@
+
+public class MiException extends RuntimeException {
+
+	public MiException(){
+		super();
+	}
+}
