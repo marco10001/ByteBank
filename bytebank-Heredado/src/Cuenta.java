@@ -23,26 +23,30 @@ public abstract class Cuenta{
 		return this.saldo;
 	}
 	
-	//retorna true o false
-	public boolean retirar(double valor) {
-		if(this.saldo>=valor) {
-			this.saldo=this.saldo-valor;
-			return true;
-		}else {
-			return false;
+	
+	public void retirar (double valor) throws SaldoInsuficienteException {
+		if(this.saldo<valor) {
+			throw new SaldoInsuficienteException("no tiene saldo");
 		}
+		this.saldo=this.saldo-valor;
 	}
+	
 	
 	public boolean tranferir(double valor,Cuenta cuenta) {
 		
 		if(this.saldo>=valor) {
-			this.retirar(valor);
+			try {
+				this.retirar(valor);
+			} catch (SaldoInsuficienteException e) {
+				e.printStackTrace();
+			}
 			cuenta.depositar(valor);
 			return true;
 		}else {
 			return false;
 		}
 	}
+	
 	
 	public void setAgencia(int agencia) {
 		if (agencia>0) {
@@ -52,6 +56,8 @@ public abstract class Cuenta{
 		}
 	}
 
+	
+	
 	public int getAgencia() {
 		return this.agencia;
 	}
